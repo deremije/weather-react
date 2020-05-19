@@ -12,7 +12,7 @@ class WeatherInfo extends React.Component {
     componentDidMount = () => {
         this.setState({
             celsius: (this.props.weatherInfo.main.temp - 273.15).toFixed(1),
-            fahrenheit: ((this.props.weatherInfo.main.temp - 273.15) * 9 / 5).toFixed(0),
+            fahrenheit: (((this.props.weatherInfo.main.temp - 273.15) * 9 / 5) + 32).toFixed(0),
         })
     }
     render() {
