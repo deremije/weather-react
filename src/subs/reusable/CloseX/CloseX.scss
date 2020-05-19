@@ -1,0 +1,19 @@
+div.closeX {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 17px;
+    transform: rotate(45deg);
+    font-family: 'Roboto Mono', sans-serif;
+    cursor: pointer;
+    background-color: #C4C4C4;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    span {
+        position: relative;
+        top: 1px;
+    }
+}

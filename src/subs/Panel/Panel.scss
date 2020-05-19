@@ -1,0 +1,41 @@
+div.panel {
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    width: 100%;
+    transition: all 200ms linear;
+    height: 100%;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    color: black;
+    display: flex;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+}
+div.clear {
+    background-image: url('/images/clearSky.jpg');
+}
+div.snow {
+    background-image: url('/images/snow.jpg');
+}
+div.mist,
+div.smoke,
+div.haze,
+div.dust,
+div.fog,
+div.sand,
+div.ash,
+div.squall,
+div.tornado {
+    background-image: url('/images/sun.jpg');
+}
+div.clouds {
+    background-image: url('/images/clouds.jpg');
+}
+div.rain {
+    background-image: url('/images/rain.jpg');
+}
+@media screen and (min-width: 451px) {
+
+}

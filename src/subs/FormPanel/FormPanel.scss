@@ -1,0 +1,71 @@
+div.formPanel {
+    height: 69px;
+    width: 320px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    div.instructions {
+        font-size: 18px;
+        font-family: Roboto, sans-serif;
+        // width: 192px;
+        width: auto;
+        max-width: 192px;
+        margin: 10px auto;
+        display: none;
+    }
+    form {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        height: 31px;
+        padding: 19px 10px;
+        input[type="text"] {
+            width: 104px;
+            height: 31px;
+            margin: 0 auto ;
+            display: block;
+            font-size: 14px;
+            font-family: Montserrat, sans-serif;
+            text-align: center;
+        }
+        button {
+            background-color: #0094E7;
+            font-size: 12px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            width: 76px;
+            height: 23px;
+            margin: 4px 0;
+        }
+    }
+}
+
+@media screen and (min-width: 451px) {
+    div.formPanel {
+        height: auto;
+        width: auto;
+        div.instructions {
+            display: block;
+        }
+        form {
+            text-align: center;
+            height: auto;
+            padding: 0;
+            flex-direction: column;
+            input[type="text"] {
+                margin: 10px auto;
+                width: 181px;
+                height: 39px;
+                font-size: 18px;
+            }
+            button {
+                margin: 10px auto;
+                width: 94px;
+                height: 34px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+div.weatherInfo {
+    margin: auto;
+    background-color: #EEEEEE;
+    width: 240px;
+    height: auto;
+    padding: 36px 0;
+    text-align: center;
+    position: relative;
+    div.city {
+        font-size: 18px;
+    }
+    div.conditions {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+    div.temperature {
+        font-size: 36px;
+    }
+}
+div.threePanels {
+    padding: 12px 0;
+}
+div.fourPanels {
+    padding: 14px 0;
+    display: grid;
+    grid-template-columns: 160px 80px;
+    grid-template-rows: 50px 20px;
+    div.city {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    div.conditions {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    div.temperature {
+        font-size: 24px;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        height: 70px;
+        line-height: 70px;
+    }
+}
+div.fivePanels {
+    padding: 14px 0;
+    width: 260px;
+    display: grid;
+    grid-template-columns: 157px 103px;
+    grid-template-rows: 21px;
+    grid-gap: 6px;
+    div.city {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        line-height: 21px;
+        width: 100%;
+    }
+    div.conditions {
+        grid-column: 1;
+        grid-row: 2;
+        line-height: 21px;
+    }
+    div.temperature {
+        font-size: 24px;
+        grid-column: 2;
+        grid-row: 2;
+        line-height: 21px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 451px) {
+    div.threePanels,
+    div.fourPanels,
+    div.fivePanels {
+        padding: 36px 0;
+        display: block;
+        width: 100%;
+        max-width: calc(100% - 40px);
+        div.city {
+            font-size: 18px;
+        }
+        div.conditions {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+        div.temperature {
+            font-size: 36px;
+            text-align: center;
+            line-height: 70px;
+        }
+    }
+}

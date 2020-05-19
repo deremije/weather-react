@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Dotenv from 'dotenv'
+
+Dotenv.config()
 
 ReactDOM.render(
   <React.StrictMode>

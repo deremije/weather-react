@@ -1,0 +1,27 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+}
+.app {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+
+@media screen and (min-width: 451px) {
+    .app {
+        flex-direction: row;
+    }
+}
