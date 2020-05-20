@@ -16,8 +16,15 @@ class App extends React.Component {
         ],
         showForm: true
     }
+
+    componentDidMount = () => {
+        console.log('mounted', localStorage.getItem('zips'))
+        if (localStorage.getItem('zips')) {
+            this.setState({zips: JSON.parse(localStorage.getItem('zips'))})
+        }
+    }
+
     removeZip = (zip) => {
-        console.log("remove", zip)
         let newZips = this.state.zips.filter(existingZip => existingZip.zip_code !== zip)
         this.setState({
             zips: newZips,
@@ -34,13 +41,7 @@ class App extends React.Component {
         this_zip.showFahrenheit = !this_zip.showFahrenheit
         this.setState({zips: this.state.zips.map(zip => (zip.zip_code === zip_code) ? this_zip : zip)})
     }
-    handleZipField = (e) => {
-        let value = e.target.value;
-        if (String(value).length > 5) {
-            value = String(value).substring(0,5);
-        }
-        this.setState({zipField: value})
-    }
+
     updateNewLocation = (zip_code, country) => {
         country = country.length ? country : "US"
         if (!this.thisZip(zip_code) && this.state.zips.length < 5) {
@@ -49,12 +50,14 @@ class App extends React.Component {
                 country: country,
                 showFahrenheit: country === "US"
             }]
+            localStorage.setItem('zips', JSON.stringify(newEntry.concat(this.state.zips)))
             this.setState(
                 {
                     zips: newEntry.concat(this.state.zips),
                     showForm: false
                 }
             )
+            
         }
     }
     render() {
